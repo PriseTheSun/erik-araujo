@@ -88,22 +88,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
                 <button
                   onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-                  className="absolute left-4 p-2 rounded-full bg-red-bright text-white hover:bg-red-deep shadow-md transition-colors"
+                  className="absolute left-4 p-3 rounded-full bg-red-bright/90 backdrop-blur-sm text-white hover:bg-red-bright shadow-lg hover:shadow-red-bright/40 hover:scale-110 active:scale-95 transition-all duration-300 ease-out"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-                  className="absolute right-4 p-2 rounded-full bg-red-bright text-white hover:bg-red-deep shadow-md transition-colors"
+                  className="absolute right-4 p-3 rounded-full bg-red-bright/90 backdrop-blur-sm text-white hover:bg-red-bright shadow-lg hover:shadow-red-bright/40 hover:scale-110 active:scale-95 transition-all duration-300 ease-out"
                 >
                   <ChevronRight size={24} />
                 </button>
 
                 <button
                   onClick={() => setIsFullScreen(true)}
-                  className="absolute bottom-4 right-4 p-2 rounded-full bg-red-bright text-white hover:bg-red-deep shadow-md transition-colors"
+                  className="absolute bottom-4 right-4 p-3 rounded-full bg-red-bright/90 backdrop-blur-sm text-white hover:bg-red-bright shadow-lg hover:shadow-red-bright/40 hover:scale-110 active:scale-95 transition-all duration-300 ease-out"
                 >
-                  <Maximize2 size={18} />
+                  <Maximize2 size={20} />
                 </button>
 
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
