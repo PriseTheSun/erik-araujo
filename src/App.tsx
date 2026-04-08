@@ -84,7 +84,7 @@ export default function App() {
           </div>
 
           <motion.a
-            href="#"
+            href="/document/CURRICULO - E.ARAÚJO.pdf"
             download="Erik-Araujo-CV.pdf"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -120,8 +120,8 @@ export default function App() {
         />
 
         {/* Hero content — aligned with logo */}
-        <div className="relative z-10 flex items-center min-h-screen py-24">
-          <div className="max-w-7xl mx-auto w-full px-4 md:px-6">
+        <div className="relative z-10 flex items-center min-h-screen px-4 md:px-6 py-24">
+          <div className="max-w-7xl mx-auto w-full">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: modelLoaded ? 1 : 0, x: modelLoaded ? 0 : -30 }}
