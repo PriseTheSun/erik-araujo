@@ -27,23 +27,24 @@ export const DETAILED_PROJECTS: Project[] = [
   },
   {
     "id": "myAppVue",
-    "title": "myAppVue",
-    "description": "Projeto focado em frontend usando Vue. Desenvolvido como parte do meu portfólio e experimentações de UI/UX.",
-    "longDescription": "O projeto myAppVue é uma aplicação focada em interatividade e boas práticas de interface. Foi estruturado para ser performático e de fácil manutenção. Esta aplicação demonstra resolução de problemas práticos, componentização e organização de código.",
+    "title": "I Want My Pet",
+    "description": "Projeto autoral fictício voltado para adoção de animais.",
+    "longDescription": "I Want My Pet é um projeto web autoral fictício criado para conectar pessoas a animais que precisam de adoção. A plataforma foi desenvolvida com foco em uma experiência de usuário intuitiva e agradável, ajudando futuros tutores a encontrarem seus novos melhores amigos.",
     "images": [
-      "/projects/myAppVue/1.jpg",
-      "/projects/myAppVue/2.jpg",
-      "/projects/myAppVue/3.jpg",
-      "/projects/myAppVue/4.jpg",
-      "/projects/myAppVue/5.jpg"
+      "/projects/i_want_my_pet/i_want_my_pet1.avif",
+      "/projects/i_want_my_pet/i_want_my_pet2.avif",
+      "/projects/i_want_my_pet/i_want_my_pet3.avif",
+      "/projects/i_want_my_pet/i_want_my_pet4.avif",
+      "/projects/i_want_my_pet/i_want_my_pet5.avif"
     ],
     "githubUrl": "https://github.com/PriseTheSun/myAppVue",
     "figmaUrl": "",
-    "liveUrl": "",
+    "liveUrl": "https://iwantmypet.netlify.app/",
     "tags": [
-      "Vue",
       "Vue.js",
+      "Vuetify",
       "JavaScript",
+      "HTML",
       "CSS"
     ]
   },
@@ -134,47 +135,54 @@ export const DETAILED_PROJECTS: Project[] = [
   },
   {
     "id": "YGO-Database",
-    "title": "YGO Database",
-    "description": "Projeto focado em frontend usando Vue. Desenvolvido como parte do meu portfólio e experimentações de UI/UX.",
-    "longDescription": "O projeto YGO Database é uma aplicação focada em interatividade e boas práticas de interface. Foi estruturado para ser performático e de fácil manutenção. Esta aplicação demonstra resolução de problemas práticos, componentização e organização de código.",
+    "title": "Yu-Gi-Oh! Database",
+    "description": "Banco de dados e buscador avançado de cartas de Yu-Gi-Oh!, focado no consumo de API REST.",
+    "longDescription": "Projeto criado para fins de estudo e aprimoramento no consumo de API. Por eu ser um grande fã de Yu-Gi-Oh!, foi uma aplicação extremamente empolgante de construir. Atualmente, os dados são consumidos usando Fetch API com Vanilla JavaScript, o que me permitiu estudar detalhadamente a dinâmica das requisições web. A aplicação também tem um sistema de campo de busca livre e filtros complexos por tipos e valores específicos das cartas do jogo.",
     "images": [
-      "/projects/YGO-Database/1.jpg",
-      "/projects/YGO-Database/2.jpg",
-      "/projects/YGO-Database/3.jpg",
-      "/projects/YGO-Database/4.jpg",
-      "/projects/YGO-Database/5.jpg"
+      "/projects/ygo_database/ygo-db1.avif",
+      "/projects/ygo_database/ygo-db2.avif",
+      "/projects/ygo_database/ygo-db3.avif",
+      "/projects/ygo_database/ygo-db4.avif",
+      "/projects/ygo_database/ygo-db5.avif"
     ],
     "githubUrl": "https://github.com/PriseTheSun/YGO-Database",
     "figmaUrl": "",
-    "liveUrl": "",
+    "liveUrl": "https://ygodatabase.netlify.app/",
     "tags": [
-      "Vue",
-      "Vue.js",
+      "Vue.js 2",
+      "Vuetify 2",
+      "Material UI Icons",
+      "SASS/SCSS",
+      "Atomic Design",
+      "Vue CLI + Babel",
+      "ESLint",
       "JavaScript",
-      "CSS"
+      "API REST"
     ]
   },
   {
     "id": "easy-astro",
-    "title": "easy astro",
-    "description": "Projeto focado em frontend usando TypeScript. Desenvolvido como parte do meu portfólio e experimentações de UI/UX.",
-    "longDescription": "O projeto easy astro é uma aplicação focada em interatividade e boas práticas de interface. Foi estruturado para ser performático e de fácil manutenção. Esta aplicação demonstra resolução de problemas práticos, componentização e organização de código.",
+    "title": "EasyJur Main Site",
+    "description": "Proposta de reestruturação do site da EasyJur com foco em alta performance, SEO e acessibilidade.",
+    "longDescription": "Este projeto foi uma proposta de implementação para substituir o atual site em WordPress da EasyJur por uma aplicação moderna, mantendo a mesma estrutura de conteúdo. Graças ao modelo de ilhas de hidratação do Astro.js e a ausência de carregamento desnecessário de JavaScript no client-side, houve um ganho de 54% de performance em comparação à stack antiga em WordPress, validando o conceito. O projeto conta também com suporte completo à navegação com Dark Mode focado em acessibilidade.",
     "images": [
-      "/projects/easy-astro/1.jpg",
-      "/projects/easy-astro/2.jpg",
-      "/projects/easy-astro/3.jpg",
-      "/projects/easy-astro/4.jpg",
-      "/projects/easy-astro/5.jpg"
+      "/projects/easyjur_astro/easyjur-astro1.avif",
+      "/projects/easyjur_astro/easyjur-astro2.avif",
+      "/projects/easyjur_astro/easyjur-astro3.avif",
+      "/projects/easyjur_astro/easyjur-astro4.avif",
+      "/projects/easyjur_astro/easyjur-astro5.avif"
     ],
     "githubUrl": "https://github.com/PriseTheSun/easy-astro",
     "figmaUrl": "",
-    "liveUrl": "",
+    "liveUrl": "https://easy-astro.netlify.app/",
     "tags": [
+      "Astro.js",
+      "React",
+      "Tailwind CSS",
+      "Radix UI",
+      "Framer Motion",
       "TypeScript",
-      "Astro",
-      "HTML",
-      "Node.js",
-      "React"
+      "Vite"
     ]
   },
   {
