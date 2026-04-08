@@ -199,6 +199,31 @@ export const DETAILED_PROJECTS: Project[] = [
       "Bootstrap",
       "JavaScript"
     ]
+  },
+  {
+    "id": "login-jurisai",
+    "title": "Login JurisAI",
+    "description": "Prototipagem em UI/UX e desenvolvimento Front-End da autenticação do assistente jurídico.",
+    "longDescription": "Neste projeto atuei ponta a ponta na construção da página de login do assistente jurídico JurisAI. Iniciei pela prototipagem de alta fidelidade no Figma e, após a aprovação do design, desenvolvi todo o Front-End do layout, garantindo regras sólidas de validação de formulário. Como um produto real, o projeto escalou e hoje integra ativamente o ecossistema da EasyJur, abrindo espaço para futuras atualizações.",
+    "images": [
+      "/projects/jurisai/jurisAI1.avif",
+      "/projects/jurisai/jurisAI2.avif",
+      "/projects/jurisai/jurisAI3.avif",
+      "/projects/jurisai/jurisAI4.avif",
+      "/projects/jurisai/jurisAI5.avif"
+    ],
+    "githubUrl": "",
+    "figmaUrl": "https://www.figma.com/proto/9mAg12WzHsk0hajaaJfjIA/Figma--Pagina-Login-JurisAI-JurisAI?node-id=2-5&t=gYtTRRKqLlmp3z6a-1&scaling=contain&content-scaling=fixed&page-id=0%3A1",
+    "liveUrl": "https://app.easyjur.com/acesso_jurisai/cadastro.php",
+    "tags": [
+      "UX/UI",
+      "Figma",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "PHP"
+    ]
   }
 ];
 
