@@ -135,30 +135,36 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 </p>
 
                 <div className="grid grid-cols-1 gap-3">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-6 py-3 bg-navy text-white rounded-xl font-bold hover:bg-navy/90 transition-colors"
-                  >
-                    <Github size={18} /> GitHub
-                  </a>
-                  <a
-                    href={project.figmaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-white rounded-xl font-bold hover:bg-muted/90 transition-colors"
-                  >
-                    <Figma size={18} /> Figma
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 px-6 py-3 bg-red-bright text-white rounded-xl font-bold hover:bg-red-deep transition-colors"
-                  >
-                    <ExternalLink size={18} /> Live Demo
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-navy text-white rounded-xl font-bold hover:bg-navy/90 transition-colors"
+                    >
+                      <Github size={18} /> GitHub
+                    </a>
+                  )}
+                  {project.figmaUrl && (
+                    <a
+                      href={project.figmaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-white rounded-xl font-bold hover:bg-muted/90 transition-colors"
+                    >
+                      <Figma size={18} /> Figma
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-red-bright text-white rounded-xl font-bold hover:bg-red-deep transition-colors"
+                    >
+                      <ExternalLink size={18} /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
         </div>

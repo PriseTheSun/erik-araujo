@@ -15,83 +15,17 @@ import {
   Globe,
   Figma as FigmaIcon,
   Cpu,
-  Download
+  Download,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { ParticleBackground } from './components/ParticleBackground';
 import { ProjectCard, ProjectModal } from './components/ProjectComponents';
 import { Project } from './types';
+import { DETAILED_PROJECTS } from './data/projects';
 import { cn } from './lib/utils';
 
-const PROJECTS: Project[] = [
-  {
-    id: '1',
-    title: 'E-commerce SaaS Platform',
-    description: 'Plataforma escalável construída com Next.js 14 e Stripe.',
-    longDescription: 'Uma solução completa de e-commerce com foco em performance e SEO. Utiliza App Router, Server Components e integração profunda com Stripe para pagamentos recorrentes e checkout otimizado.',
-    images: [
-      'https://picsum.photos/seed/ecommerce1/1200/800',
-      'https://picsum.photos/seed/ecommerce2/1200/800',
-      'https://picsum.photos/seed/ecommerce3/1200/800',
-      'https://picsum.photos/seed/ecommerce4/1200/800',
-      'https://picsum.photos/seed/ecommerce5/1200/800',
-    ],
-    githubUrl: 'https://github.com/PriseTheSun',
-    figmaUrl: 'https://figma.com',
-    liveUrl: 'https://ais-dev-4axmz4w2s3lnqakmhvrirr-38306636693.us-west1.run.app',
-    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Stripe', 'PostgreSQL']
-  },
-  {
-    id: '2',
-    title: 'Design System Core',
-    description: 'Biblioteca de componentes acessíveis e documentados.',
-    longDescription: 'Desenvolvimento de um Design System robusto utilizando Radix UI e Tailwind CSS. Foco total em acessibilidade (WCAG), tokens de design e documentação via Storybook.',
-    images: [
-      'https://picsum.photos/seed/design1/1200/800',
-      'https://picsum.photos/seed/design2/1200/800',
-      'https://picsum.photos/seed/design3/1200/800',
-      'https://picsum.photos/seed/design4/1200/800',
-      'https://picsum.photos/seed/design5/1200/800',
-    ],
-    githubUrl: 'https://github.com/PriseTheSun',
-    figmaUrl: 'https://figma.com',
-    liveUrl: 'https://ais-dev-4axmz4w2s3lnqakmhvrirr-38306636693.us-west1.run.app',
-    tags: ['React', 'Radix UI', 'Tailwind', 'Storybook', 'A11y']
-  },
-  {
-    id: '3',
-    title: 'Real-time Dashboard',
-    description: 'Dashboard analítico com atualizações em tempo real via WebSockets.',
-    longDescription: 'Interface administrativa complexa para monitoramento de dados em tempo real. Utiliza D3.js para visualizações avançadas e Socket.io para comunicação bidirecional de baixa latência.',
-    images: [
-      'https://picsum.photos/seed/dash1/1200/800',
-      'https://picsum.photos/seed/dash2/1200/800',
-      'https://picsum.photos/seed/dash3/1200/800',
-      'https://picsum.photos/seed/dash4/1200/800',
-      'https://picsum.photos/seed/dash5/1200/800',
-    ],
-    githubUrl: 'https://github.com/PriseTheSun',
-    figmaUrl: 'https://figma.com',
-    liveUrl: 'https://ais-dev-4axmz4w2s3lnqakmhvrirr-38306636693.us-west1.run.app',
-    tags: ['Vue.js 3', 'D3.js', 'Socket.io', 'Pinia', 'Vite']
-  },
-  {
-    id: '4',
-    title: 'Astro Blog Engine',
-    description: 'Blog estático ultra-rápido com foco em Core Web Vitals.',
-    longDescription: 'Motor de blog construído com Astro.js para entrega de HTML puro com zero JavaScript por padrão. Alcança pontuações perfeitas no Lighthouse e utiliza Markdown para conteúdo.',
-    images: [
-      'https://picsum.photos/seed/blog1/1200/800',
-      'https://picsum.photos/seed/blog2/1200/800',
-      'https://picsum.photos/seed/blog3/1200/800',
-      'https://picsum.photos/seed/blog4/1200/800',
-      'https://picsum.photos/seed/blog5/1200/800',
-    ],
-    githubUrl: 'https://github.com/PriseTheSun',
-    figmaUrl: 'https://figma.com',
-    liveUrl: 'https://ais-dev-4axmz4w2s3lnqakmhvrirr-38306636693.us-west1.run.app',
-    tags: ['Astro', 'Markdown', 'Tailwind', 'SEO', 'Performance']
-  }
-];
+
 
 const STACK = [
   { category: 'Front-End', skills: ['React', 'Next.js', 'Vue.js 3', 'TypeScript', 'Astro.js'] },
@@ -105,12 +39,26 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [modelLoaded, setModelLoaded] = useState(false);
+  
+  const [projects] = useState<Project[]>(DETAILED_PROJECTS);
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 8;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="relative min-h-screen selection:bg-red-bright selection:text-white">
@@ -281,8 +229,8 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {PROJECTS.map((project) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {currentProjects.map((project) => (
               <ProjectCard 
                 key={project.id} 
                 project={project} 
@@ -291,6 +239,41 @@ export default function App() {
               />
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <div className="flex justify-center flex-wrap items-center mt-16 gap-2">
+              <button 
+                onClick={() => paginate(Math.max(1, currentPage - 1))}
+                disabled={currentPage === 1}
+                className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition-colors bg-white text-navy border border-navy/10 hover:bg-navy/5 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => paginate(i + 1)}
+                  className={cn(
+                    "w-10 h-10 rounded-full font-bold transition-all duration-300",
+                    currentPage === i + 1 
+                      ? "bg-red-bright text-white shadow-lg shadow-red-bright/30 scale-110" 
+                      : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
+                  )}
+                >
+                  {i + 1}
+                </button>
+              ))}
+
+              <button 
+                onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
+                disabled={currentPage === totalPages}
+                className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition-colors bg-white text-navy border border-navy/10 hover:bg-navy/5 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
