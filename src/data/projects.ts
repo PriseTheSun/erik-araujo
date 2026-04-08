@@ -17,12 +17,16 @@ export const DETAILED_PROJECTS: Project[] = [
     "figmaUrl": "",
     "liveUrl": "https://lavanderiacleannobre.netlify.app/",
     "tags": [
+      "React",
       "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Google Search Console",
-      "Google Sheets"
+      "Tailwind CSS 4",
+      "Framer Motion",
+      "Lucide React",
+      "Vite",
+      "Express.js (Node.js)",
+      "Google Sheets API",
+      "Gemini API (Google)",
+      "Google Service Account"
     ]
   },
   {
