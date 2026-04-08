@@ -88,20 +88,20 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
                 <button
                   onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-                  className="absolute left-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  className="absolute left-4 p-2 rounded-full bg-red-bright text-white hover:bg-red-deep shadow-md transition-colors"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-                  className="absolute right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  className="absolute right-4 p-2 rounded-full bg-red-bright text-white hover:bg-red-deep shadow-md transition-colors"
                 >
                   <ChevronRight size={24} />
                 </button>
 
                 <button
                   onClick={() => setIsFullScreen(true)}
-                  className="absolute bottom-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  className="absolute bottom-4 right-4 p-2 rounded-full bg-red-bright text-white hover:bg-red-deep shadow-md transition-colors"
                 >
                   <Maximize2 size={18} />
                 </button>

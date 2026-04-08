@@ -130,5 +130,27 @@ export const DETAILED_PROJECTS: Project[] = [
       "Lucide React",
       "TypeScript"
     ]
+  },
+  {
+    "id": "hub-calculos",
+    "title": "Hub Calculadoras Jurídicas",
+    "description": "Hub desenvolvido para auxiliar advogados, contendo lógica matemática baseada em legislação complexa.",
+    "longDescription": "Um projeto com o conceito de Hub reunindo diferentes calculadoras essenciais para o uso diário de advogados. Apesar de a demanda inicial ser aparentemente simples, o desenvolvimento exigiu horas de estudo denso da legislação vigente e de fórmulas matemáticas jurídicas de cálculos até então manuais, garantindo 100% de precisão nos resultados. O portal também oferece suporte a Dark Mode visando melhorar a UX nas horas prolongadas de tela.",
+    "images": [
+      "/projects/hub_juridico/calc_penal1.avif",
+      "/projects/hub_juridico/calc_penal2.avif",
+      "/projects/hub_juridico/calc_penal3.avif",
+      "/projects/hub_juridico/calc_penal4.avif",
+      "/projects/hub_juridico/calc_penal5.avif"
+    ],
+    "githubUrl": "https://github.com/PriseTheSun/calculadora-penal",
+    "figmaUrl": "",
+    "liveUrl": "https://hub-calculos-easyjur.netlify.app/",
+    "tags": [
+      "HTML",
+      "Tailwind CSS",
+      "jQuery"
+    ]
   }
 ];
+
