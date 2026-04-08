@@ -19,7 +19,7 @@ export const DETAILED_PROJECTS: Project[] = [
     "tags": [
       "React",
       "TypeScript",
-      "Tailwind CSS 4",
+      "Tailwind CSS",
       "Framer Motion",
       "Lucide React",
       "Vite",
@@ -120,9 +120,9 @@ export const DETAILED_PROJECTS: Project[] = [
     "figmaUrl": "",
     "liveUrl": "https://rob-go-investidor.netlify.app/",
     "tags": [
-      "Next.js 15 (App Router)",
+      "Next.js 15",
       "React 19",
-      "Tailwind CSS 4",
+      "Tailwind CSS",
       "Motion",
       "Recharts",
       "react-markdown",
@@ -150,6 +150,54 @@ export const DETAILED_PROJECTS: Project[] = [
       "HTML",
       "Tailwind CSS",
       "jQuery"
+    ]
+  },
+  {
+    "id": "app-financas",
+    "title": "App Finanças Inteligentes",
+    "description": "Aplicação Full Stack para controle financeiro inteligente, com banco de dados estruturado.",
+    "longDescription": "Um projeto Full Stack robusto voltado para a gestão e controle de finanças pessoais e conjuntas (casal). O foco da ferramenta é oferecer clareza total sobre o fluxo de caixa mediante gráficos interativos e painéis dinâmicos. Construído com as mais recentes versões do Next.js e React, este app utiliza o Supabase como BaaS integrado ao PostgreSQL, garantindo alta persistência, segurança dos dados e performance impecável.",
+    "images": [
+      "/projects/finance/finance1.avif",
+      "/projects/finance/finance2.avif",
+      "/projects/finance/finance3.avif",
+      "/projects/finance/finance4.avif",
+      "/projects/finance/finance5.avif"
+    ],
+    "githubUrl": "https://github.com/PriseTheSun/financas-inteligentes/",
+    "figmaUrl": "",
+    "liveUrl": "https://finanancas-casal.netlify.app/",
+    "tags": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "motion",
+      "Recharts",
+      "Supabase",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "black-ivory-coffee",
+    "title": "Black Ivory Coffee",
+    "description": "Landing page conceitual explorando o café mais exótico do mundo, focada em UI/UX.",
+    "longDescription": "Projeto Front-end desenvolvido com foco em design e usabilidade onde explorei a fundo o framework Bootstrap. Buscando elaborar algo muito original, me inspirei em referências do Behance e utilizei minha paixão por cafés refinados. Pesquisei o café mais peculiar do mundo, 'Black Ivory' (cuja confecção passa estrategicamente pelo processo digestivo dos elefantes na Tailândia) e criei esta página visualmente rica, informativa e totalmente responsiva.",
+    "images": [
+      "/projects/black_ivory/cafe1.avif",
+      "/projects/black_ivory/cafe2.avif",
+      "/projects/black_ivory/cafe3.avif",
+      "/projects/black_ivory/cafe4.avif",
+      "/projects/black_ivory/cafe5.avif"
+    ],
+    "githubUrl": "https://github.com/PriseTheSun/Black-Ivory-Coffe-Brasil",
+    "figmaUrl": "",
+    "liveUrl": "https://blackivorycoffebrasil.netlify.app/",
+    "tags": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript"
     ]
   }
 ];
