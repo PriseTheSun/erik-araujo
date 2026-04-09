@@ -11,10 +11,10 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ modelLoaded, onModelLoaded }) => {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* 3D Scene — fills the whole section */}
+
       <ParticleBackground onLoaded={onModelLoaded} />
 
-      {/* Left gradient overlay for text legibility */}
+
       <div
         className="absolute inset-y-0 left-0 z-10 w-full md:w-[65%] pointer-events-none"
         style={{
@@ -22,7 +22,6 @@ export const Hero: React.FC<HeroProps> = ({ modelLoaded, onModelLoaded }) => {
         }}
       />
 
-      {/* Hero content — aligned with logo */}
       <div className="relative z-10 flex items-center min-h-screen px-4 md:px-6 py-24">
         <div className="max-w-7xl mx-auto w-full">
           <motion.div
