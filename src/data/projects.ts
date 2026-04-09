@@ -25,8 +25,6 @@ export const DETAILED_PROJECTS: Project[] = [
       "Vite",
       "Express.js (Node.js)",
       "Google Sheets API",
-      "Gemini API (Google)",
-      "Google Service Account"
     ]
   },
   {
@@ -171,7 +169,7 @@ export const DETAILED_PROJECTS: Project[] = [
       "Next.js 15",
       "React 19",
       "TypeScript",
-      "Tailwind CSS 4",
+      "Tailwind CSS",
       "motion",
       "Recharts",
       "Supabase",
