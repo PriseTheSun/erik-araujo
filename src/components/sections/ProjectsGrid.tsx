@@ -29,9 +29,7 @@ export const ProjectsGrid: React.FC = () => {
             <h2 className="text-4xl font-black text-navy tracking-tighter mb-4">PROJETOS SELECIONADOS</h2>
             <p className="text-muted max-w-xl">Uma vitrine de soluções técnicas focadas em resultados de negócio e experiência excepcional.</p>
           </div>
-          <div className="hidden md:block">
-            <span className="text-sm font-bold text-muted uppercase tracking-widest">Scroll to explore</span>
-          </div>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
