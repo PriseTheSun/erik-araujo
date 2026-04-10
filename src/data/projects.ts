@@ -2,6 +2,31 @@ import { Project } from "../types";
 
 export const DETAILED_PROJECTS: Project[] = [
   {
+    "id": "erik-araujo",
+    "title": "Portifólio Erik Araújo",
+    "description": "Portifólio 2026: onde criatividade e tecnologia se encontram para contar uma história através do código.",
+    "longDescription": "Este portifólio é um dos projetos mais satisfatórios e empolgantes da minha jornada como desenvolvedor. Mais do que uma vitrine de trabalhos, ele é em si mesmo uma obra — um espaço onde a criatividade cria asas. Construído com as tecnologias mais modernas do ecossistema React, cada detalhe foi pensado com cuidado: desde a cena 3D animada com Three.js no hero, até as transições fluidas orquestradas pelo Framer Motion. O resultado é uma experiência imersiva e visualmente rica que reflete minha identidade como dev.",
+    "images": [
+      "/projects/portifolio/portifolio1.avif",
+      "/projects/portifolio/portifolio2.avif",
+      "/projects/portifolio/portifolio3.avif",
+      "/projects/portifolio/portifolio4.avif",
+      "/projects/portifolio/portifolio5.avif"
+    ],
+    "githubUrl": "https://github.com/PriseTheSun/erik-araujo",
+    "figmaUrl": "",
+    "liveUrl": "https://portifolio-earaujo.netlify.app/",
+    "tags": [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS 4",
+      "Three.js",
+      "Framer Motion",
+      "Lucide React"
+    ]
+  },
+  {
     "id": "Clean_Nobre",
     "title": "Clean Nobre",
     "description": "Landing page funcional para a Lavanderia Clean Nobre, otimizada para SEO e captação de leads.",
