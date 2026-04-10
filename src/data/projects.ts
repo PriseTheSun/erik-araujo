@@ -27,6 +27,31 @@ export const DETAILED_PROJECTS: Project[] = [
     ]
   },
   {
+    "id": "chaves-araujo",
+    "title": "Chaves Araújo",
+    "description": "Site institucional em fase de briefing para empresa de engenharia e arquitetura, com foco em presença digital e identidade de marca.",
+    "longDescription": "O projeto Chaves Araújo é um site institucional desenvolvido para uma empresa especializada em engenharia e arquitetura. Em sua fase inicial de briefing e concepção, o objetivo é construir uma presença digital sólida e sofisticada que reflita a excelência técnica e o refinamento estético da empresa. A proposta contempla uma interface moderna com navegação fluida, seções dedicadas ao portfólio de obras, serviços prestados e equipe profissional — tudo orquestrado com animações suaves via Motion e uma experiência de usuário intuitiva conduzida pelo React Router DOM. O projeto prioriza a identidade visual da marca aliada às melhores práticas de performance e acessibilidade.",
+    "images": [
+      "/projects/chaves_araujo/chaves1.avif",
+      "/projects/chaves_araujo/chaves2.avif",
+      "/projects/chaves_araujo/chaves3.avif",
+      "/projects/chaves_araujo/chaves4.avif",
+      "/projects/chaves_araujo/chaves5.avif"
+    ],
+    "githubUrl": "https://github.com/PriseTheSun/chavesaraujo",
+    "figmaUrl": "",
+    "liveUrl": "https://chavesaraujo.netlify.app/",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Motion",
+      "React Router DOM",
+      "Lucide React"
+    ]
+  },
+  {
     "id": "Clean_Nobre",
     "title": "Clean Nobre",
     "description": "Landing page funcional para a Lavanderia Clean Nobre, otimizada para SEO e captação de leads.",
