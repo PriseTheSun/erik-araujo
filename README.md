@@ -1,20 +1,27 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Erik Araújo | Front-End Developer Portfolio
 
-# Run and deploy your AI Studio app
+Portfólio de Erik Araújo, Desenvolvedor Front-End com 6+ anos de experiência em startups de tecnologia. Especialista em React, Next.js e arquiteturas modernas.
 
-This contains everything you need to run your app locally.
+## Como Executar Localmente
 
-View your app in AI Studio: https://ai.studio/apps/7aac8535-f7ab-4681-b1e3-fcb98a23fe36
+**Pré-requisitos:** Node.js
 
-## Run Locally
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-**Prerequisites:**  Node.js
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
+## Tecnologias Utilizadas
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- **React 19** & **TypeScript**
+- **Vite**
+- **Tailwind CSS 4**
+- **Three.js**
+- **Framer Motion**
+- **Lucide React**
+
