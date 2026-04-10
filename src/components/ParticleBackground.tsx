@@ -7,10 +7,12 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 
 interface Props {
   onLoaded?: () => void;
+  isDark: boolean;
 }
 
-export const ParticleBackground: React.FC<Props> = ({ onLoaded }) => {
+export const ParticleBackground: React.FC<Props> = ({ onLoaded, isDark }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const skyUniformsRef = useRef<any>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -39,11 +41,12 @@ export const ParticleBackground: React.FC<Props> = ({ onLoaded }) => {
     scene.add(sky);
 
     const uniforms = sky.material.uniforms;
+    skyUniformsRef.current = uniforms;
     uniforms['turbidity'].value = 0;
-    uniforms['rayleigh'].value = 3;
+    uniforms['rayleigh'].value = isDark ? 3 : 1;
     uniforms['mieDirectionalG'].value = 0.7;
     uniforms['cloudElevation'].value = 1;
-    uniforms['sunPosition'].value.set(-0.8, 0.19, 0.56);
+    uniforms['sunPosition'].value.set(-0.8, isDark ? 0.19 : 0.4, 0.56);
 
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     const environment = pmremGenerator.fromScene(sky as unknown as THREE.Scene).texture;
@@ -62,8 +65,6 @@ export const ParticleBackground: React.FC<Props> = ({ onLoaded }) => {
     const updateViewOffset = () => {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      // Em telas maiores que 768px, desloca a cena 25% para a direita
-      // Em mobile, mantém no centro
       const shiftX = w > 768 ? -w * 0.25 : 0;
       camera.setViewOffset(w, h, shiftX, 0, w, h);
     };
@@ -140,5 +141,13 @@ export const ParticleBackground: React.FC<Props> = ({ onLoaded }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (skyUniformsRef.current) {
+      skyUniformsRef.current['rayleigh'].value = isDark ? 3 : 1;
+      skyUniformsRef.current['sunPosition'].value.set(-0.8, isDark ? 0.19 : 0.4, 0.56);
+    }
+  }, [isDark]);
+
   return <div ref={containerRef} className="absolute inset-0 z-0" />;
 };
+

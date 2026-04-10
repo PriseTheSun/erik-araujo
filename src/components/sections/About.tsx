@@ -3,11 +3,11 @@ import { Monitor, Layout, Cpu, Globe } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 px-6 bg-white">
+    <section id="about" className="py-24 px-6 dark:bg-navy bg-white transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-4xl font-black text-navy mb-8 tracking-tighter">
+            <h2 className="text-4xl font-black mb-8 tracking-tighter dark:text-white text-navy">
               ESPECIALISTA EM <br />
               <span className="text-red-bright">ARQUITETURAS MODERNAS</span>
             </h2>
@@ -17,11 +17,11 @@ export const About: React.FC = () => {
             
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <div className="text-4xl font-black text-navy mb-1">6+</div>
+                <div className="text-4xl font-black mb-1 dark:text-white text-navy">6+</div>
                 <div className="text-sm font-bold text-muted uppercase tracking-wider">Anos de Experiência</div>
               </div>
               <div>
-                <div className="text-4xl font-black text-navy mb-1">50+</div>
+                <div className="text-4xl font-black mb-1 dark:text-white text-navy">50+</div>
                 <div className="text-sm font-bold text-muted uppercase tracking-wider">Projetos Entregues</div>
               </div>
             </div>
@@ -34,9 +34,9 @@ export const About: React.FC = () => {
               { icon: <Cpu className="text-red-bright" />, title: 'Arquitetura', desc: 'Código Limpo & Escalável' },
               { icon: <Globe className="text-red-bright" />, title: 'Global', desc: 'Remoto & Internacional' },
             ].map((item, i) => (
-              <div key={i} className="p-8 rounded-2xl bg-light border border-navy/5 hover:border-red-bright/20 transition-all group">
+              <div key={i} className="p-8 rounded-2xl dark:bg-white/5 bg-light border dark:border-white/10 border-navy/5 hover:border-red-bright/20 transition-all group">
                 <div className="mb-4 transform group-hover:scale-110 transition-transform">{item.icon}</div>
-                <h3 className="font-bold text-navy mb-1">{item.title}</h3>
+                <h3 className="font-bold mb-1 dark:text-white text-navy">{item.title}</h3>
                 <p className="text-xs text-muted">{item.desc}</p>
               </div>
             ))}
@@ -44,5 +44,6 @@ export const About: React.FC = () => {
         </div>
       </div>
     </section>
+
   );
 };

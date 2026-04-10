@@ -3,9 +3,9 @@ import { Github, Linkedin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="py-12 px-6 bg-light border-t border-navy/5">
+    <footer className="py-12 px-6 dark:bg-navy bg-light border-t dark:border-white/10 border-navy/5 transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="text-xl font-black tracking-tighter text-navy">
+        <div className="text-xl font-black tracking-tighter dark:text-white text-navy">
           ERIK<span className="text-red-bright">.</span>ARAUJO
         </div>
         
@@ -14,14 +14,15 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="flex gap-6">
-          <a href="https://github.com/PriseTheSun" target="_blank" className="text-navy hover:text-red-bright transition-colors">
+          <a href="https://github.com/PriseTheSun" target="_blank" className="dark:text-white text-navy hover:text-red-bright transition-colors">
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com/in/deverikaraujo" target="_blank" className="text-navy hover:text-red-bright transition-colors">
+          <a href="https://linkedin.com/in/deverikaraujo" target="_blank" className="dark:text-white text-navy hover:text-red-bright transition-colors">
             <Linkedin size={20} />
           </a>
         </div>
       </div>
     </footer>
+
   );
 };

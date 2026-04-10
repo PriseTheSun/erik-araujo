@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Configure class-based dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-navy: #2B2D42;
   --color-muted: #8D99AE;
@@ -14,6 +17,11 @@
 @layer base {
   body {
     @apply bg-light text-navy font-sans antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark body {
+    @apply bg-navy text-light;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -25,7 +33,18 @@
   .glass {
     @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
-  
+
+  .glass-theme {
+    background-color: rgba(255, 255, 255, 0.7);
+    @apply backdrop-blur-md border border-navy/10 shadow-sm;
+    transition: background-color 0.3s ease;
+  }
+
+  .dark .glass-theme {
+    background-color: rgba(43, 45, 66, 0.85);
+    @apply border-white/10 shadow-lg;
+  }
+
   .glass-dark {
     @apply bg-navy/80 backdrop-blur-md border border-white/10;
   }

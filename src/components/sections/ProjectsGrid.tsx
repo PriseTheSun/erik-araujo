@@ -22,11 +22,11 @@ export const ProjectsGrid: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-24 px-6 bg-light">
+    <section id="projects" className="py-24 px-6 dark:bg-navy bg-light transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-16">
           <div>
-            <h2 className="text-4xl font-black text-navy tracking-tighter mb-4">PROJETOS SELECIONADOS</h2>
+            <h2 className="text-4xl font-black mb-4 tracking-tighter dark:text-white text-navy">PROJETOS SELECIONADOS</h2>
             <p className="text-muted max-w-xl">Uma vitrine de soluções técnicas focadas em resultados de negócio e experiência excepcional.</p>
           </div>
 
@@ -48,7 +48,7 @@ export const ProjectsGrid: React.FC = () => {
             <button 
               onClick={() => paginate(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
-              className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition-colors bg-white text-navy border border-navy/10 hover:bg-navy/5 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition-colors dark:bg-white/10 bg-white dark:text-white text-navy border border-navy/10 dark:border-white/10 hover:bg-navy/5 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronLeft size={20} />
             </button>
@@ -61,7 +61,7 @@ export const ProjectsGrid: React.FC = () => {
                   "w-10 h-10 rounded-full font-bold transition-all duration-300",
                   currentPage === i + 1 
                     ? "bg-red-bright text-white shadow-lg shadow-red-bright/30 scale-110" 
-                    : "bg-white text-navy border border-navy/10 hover:bg-navy/5"
+                    : "dark:bg-white/10 bg-white dark:text-white text-navy border border-navy/10 dark:border-white/10 hover:bg-navy/5"
                 )}
               >
                 {i + 1}
@@ -71,13 +71,14 @@ export const ProjectsGrid: React.FC = () => {
             <button 
               onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
               disabled={currentPage === totalPages}
-              className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition-colors bg-white text-navy border border-navy/10 hover:bg-navy/5 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-10 h-10 flex items-center justify-center rounded-full font-bold transition-colors dark:bg-white/10 bg-white dark:text-white text-navy border border-navy/10 dark:border-white/10 hover:bg-navy/5 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronRight size={20} />
             </button>
           </div>
         )}
       </div>
+
 
       <ProjectModal 
         project={selectedProject} 

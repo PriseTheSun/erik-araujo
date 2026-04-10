@@ -15,7 +15,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, isSe
     <motion.div
       onClick={onClick}
       className={cn(
-        "group relative overflow-hidden rounded-xl bg-white shadow-lg cursor-pointer hover:shadow-2xl transition-all duration-300",
+        "group relative overflow-hidden rounded-xl dark:bg-white/5 bg-white shadow-lg cursor-pointer hover:shadow-2xl transition-all duration-300 border dark:border-white/10 border-navy/5",
         isSelected ? "z-50" : "z-0 hover:z-10"
       )}
       style={{ zIndex: isSelected ? 50 : undefined }}
@@ -31,11 +31,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick, isSe
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-navy mb-2">{project.title}</h3>
+        <h3 className="text-xl font-bold dark:text-white text-navy mb-2">{project.title}</h3>
         <p className="text-muted text-sm line-clamp-2">{project.description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className="px-2 py-1 text-[10px] uppercase tracking-wider font-bold bg-light text-muted rounded">
+            <span key={tag} className="px-2 py-1 text-[10px] uppercase tracking-wider font-bold dark:bg-white/10 bg-light text-muted rounded">
               {tag}
             </span>
           ))}
@@ -67,7 +67,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       />
       
       <div
-        className="relative w-full max-w-5xl bg-light rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] flex flex-col max-h-[90vh] z-10"
+        className="relative w-full max-w-5xl dark:bg-navy bg-light rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] flex flex-col max-h-[90vh] z-10 border dark:border-white/10"
       >
             <button
               onClick={onClose}
@@ -122,15 +122,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
               {/* Content Section */}
               <div className="w-full md:w-2/5 p-6 md:p-8 flex flex-col">
-                <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">{project.title}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold dark:text-white text-navy mb-4">{project.title}</h2>
                 <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 text-[10px] uppercase tracking-wider font-bold bg-navy/5 text-muted rounded">
+                    <span key={tag} className="px-2 py-1 text-[10px] uppercase tracking-wider font-bold dark:bg-white/10 bg-navy/5 text-muted rounded">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <p className="text-navy/80 text-sm md:text-base leading-relaxed mb-6 md:mb-8 flex-grow">
+                <p className="dark:text-white/80 text-navy/80 text-sm md:text-base leading-relaxed mb-6 md:mb-8 flex-grow">
                   {project.longDescription}
                 </p>
 
@@ -140,11 +140,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 px-6 py-3 bg-navy text-white rounded-xl font-bold hover:bg-navy/90 transition-colors"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-navy dark:bg-white dark:text-navy text-white rounded-xl font-bold hover:bg-navy/90 transition-colors"
                     >
                       <Github size={18} /> GitHub
                     </a>
                   )}
+
                   {project.figmaUrl && (
                     <a
                       href={project.figmaUrl}
