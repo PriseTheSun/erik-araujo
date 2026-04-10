@@ -272,6 +272,30 @@ export const DETAILED_PROJECTS: Project[] = [
       "JavaScript",
       "PHP"
     ]
+  },
+  {
+    "id": "py-manga",
+    "title": "Manga Downloader",
+    "description": "Automatizador de download e organização de capítulos de mangá para leitura offline.",
+    "longDescription": "O Manga Downloader é uma ferramenta poderosa desenvolvida em Python para entusiastas de mangás que desejam organizar sua biblioteca digital. A aplicação utiliza BeautifulSoup4 e LXML para realizar o scraping de sites de forma eficiente, extraindo e organizando arquivos WebP em pastas estruturadas por capítulos. Com uma interface intuitiva construída em Tkinter e processamento assíncrono via Threading, o projeto garante downloads rápidos sem travar a interface, permitindo que o usuário acompanhe o progresso em tempo real e prepare seus arquivos para leitura offline em qualquer dispositivo.",
+    "images": [
+      "/projects/manga_py/mangapy1.avif",
+      "/projects/manga_py/mangapy2.avif",
+      "/projects/manga_py/mangapy3.avif",
+      "/projects/manga_py/mangapy4.avif",
+      "/projects/manga_py/mangapy5.avif"
+    ],
+    "githubUrl": "https://github.com/PriseTheSun/py_manga",
+    "figmaUrl": "",
+    "liveUrl": "",
+    "tags": [
+      "Python 3",
+      "Tkinter",
+      "BeautifulSoup4",
+      "Requests",
+      "Threading",
+      "LXML"
+    ]
   }
 ];
 
