@@ -140,7 +140,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 px-6 py-3 bg-navy dark:bg-white dark:text-navy text-white rounded-xl font-bold hover:bg-navy/90 transition-colors"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-navy dark:bg-white dark:text-navy text-white rounded-xl font-bold hover:bg-navy/80 dark:hover:bg-white/80 transition-colors"
                     >
                       <Github size={18} /> GitHub
                     </a>
@@ -151,7 +151,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                       href={project.figmaUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 px-6 py-3 bg-muted text-white rounded-xl font-bold hover:bg-muted/90 transition-colors"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-muted dark:bg-white/20 dark:text-white text-white rounded-xl font-bold hover:bg-muted/80 dark:hover:bg-white/30 transition-colors"
                     >
                       <Figma size={18} /> Figma
                     </a>
@@ -161,7 +161,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 px-6 py-3 bg-red-bright text-white rounded-xl font-bold hover:bg-red-deep transition-colors"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-red-bright text-white rounded-xl font-bold hover:bg-red-deep dark:hover:bg-red-deep transition-colors"
                     >
                       <ExternalLink size={18} /> Live Demo
                     </a>
