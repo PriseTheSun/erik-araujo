@@ -47,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, isDark, onToggleTheme 
 
           <div className="flex items-center gap-4">
             <motion.a
-              href="/document/CURRICULO - E.ARAÚJO.pdf"
+              href="/document/Erik Araújo - Curriculo.pdf"
               download="Erik-Araujo-CV.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -123,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({ scrolled, isDark, onToggleTheme 
               </div>
 
               <a
-                href="/document/CURRICULO - E.ARAÚJO.pdf"
+                href="/document/Erik Araújo - Curriculo.pdf"
                 download="Erik-Araujo-CV.pdf"
                 className="mt-12 w-full py-5 bg-red-bright text-white rounded-2xl text-lg font-black text-center flex items-center justify-center gap-3 shadow-xl shadow-red-bright/20"
               >
